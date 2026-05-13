@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velaire | Aromas para espacios modernos</title>
+  <meta name="description" content="Velaire: velas aromáticas, difusores, sprays ambientales y aromas premium para transformar tus espacios." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f0e8;
+      --bg-2: #eadfD2;
+      --dark: #211d19;
+      --text: #403832;
+      --muted: #75685e;
+      --cream: rgba(255, 255, 255, 0.42);
+      --glass: rgba(255, 255, 255, 0.28);
+      --border: rgba(255, 255, 255, 0.62);
+      --shadow: 0 24px 90px rgba(49, 35, 25, 0.18);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-full: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 10% 5%, rgba(255,255,255,0.95), transparent 30%),
+        radial-gradient(circle at 90% 25%, rgba(207,188,166,0.65), transparent 34%),
+        radial-gradient(circle at 50% 90%, rgba(255,255,255,0.8), transparent 36%),
+        linear-gradient(135deg, var(--bg), var(--bg-2));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .glass {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(26px) saturate(155%);
+      -webkit-backdrop-filter: blur(26px) saturate(155%);
+      box-shadow: var(--shadow);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      font-weight: 500;
+      transition: 0.28s ease;
+      border: 1px solid rgba(255,255,255,0.6);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+
+    .btn-glass {
+      background: rgba(255,255,255,0.35);
+      color: var(--dark);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 18px 45px rgba(42, 30, 20, 0.18);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      color: #8c7d70;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      font-size: clamp(54px, 8vw, 104px);
+      line-height: 0.92;
+    }
+
+    h2 {
+      font-size: clamp(42px, 5.5vw, 74px);
+      line-height: 0.98;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    .nav-wrap {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 0 18px;
+    }
+
+    nav {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      border-radius: var(--radius-full);
+      padding: 11px 12px 11px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.03em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #5f544c;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 138px 0 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: var(--radius-full);
+      padding: 10px 15px;
+      margin-bottom: 30px;
+      color: #65584e;
+      font-size: 14px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #9b7b5d;
+    }
+
+    .hero-text p {
+      max-width: 590px;
+      margin: 26px 0 34px;
+      font-size: 18px;
+      color: #5e544d;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 560px;
+    }
+
+    .stat {
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 30px;
+      font-weight: 300;
+      color: var(--dark);
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 640px;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 0;
+      border-radius: 48px;
+      transform: rotate(2deg);
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 26px;
+      width: calc(100% - 52px);
+      height: calc(100% - 52px);
+      object-fit: cover;
+      border-radius: 40px;
+      box-shadow: 0 28px 90px rgba(35, 25, 18, 0.24);
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 50px;
+      right: 50px;
+      bottom: 52px;
+      border-radius: 30px;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+    }
+
+    .floating-card small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #806f61;
+      margin-bottom: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .floating-card p {
+      color: #5d5148;
+      font-size: 14px;
+    }
+
+    /* QUICK ACCESS */
+    .quick-access {
+      padding: 20px 0 74px;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .quick-card {
+      border-radius: 26px;
+      padding: 24px;
+      min-height: 145px;
+      transition: 0.28s ease;
+    }
+
+    .quick-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.55);
+    }
+
+    .quick-card small {
+      color: #8e7e70;
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .quick-card strong {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark);
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    /* SECTIONS */
+    section {
+      position: relative;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      color: var(--muted);
+    }
+
+    .catalog {
+      padding: 70px 0 90px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter {
+      padding: 12px 17px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,0.36);
+      border: 1px solid rgba(255,255,255,0.62);
+      color: #5f534b;
+      font-size: 14px;
+    }
+
+    .filter.active {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      border-radius: 34px;
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.54);
+    }
+
+    .product-image {
+      height: 310px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.7s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
+
+    .tag {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      padding: 9px 13px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      background: rgba(255,255,255,0.48);
+      border: 1px solid rgba(255,255,255,0.7);
+      backdrop-filter: blur(18px);
+    }
+
+    .product-info {
+      padding: 21px;
+    }
+
+    .mood {
+      color: #8b7c70;
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+
+    .notes {
+      color: #665c54;
+      font-size: 14px;
+      min-height: 70px;
+      margin: 12px 0 18px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      font-size: 22px;
+      color: var(--dark);
+      font-weight: 300;
+    }
+
+    .mini-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mini-btn {
+      padding: 10px 13px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      border: 1px solid rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.35);
+      transition: 0.25s ease;
+    }
+
+    .mini-btn.dark {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+
+    .mini-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* AROMAS */
+    .aromas {
+      padding: 65px 0 95px;
+    }
+
+    .aromas-panel {
+      border-radius: 48px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .aromas-panel p {
+      color: var(--muted);
+      margin: 22px 0 28px;
+    }
+
+    .aroma-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .aroma-card {
+      border-radius: 28px;
+      padding: 26px;
+      background: rgba(255,255,255,0.28);
+      border: 1px solid rgba(255,255,255,0.6);
+      transition: 0.25s ease;
+    }
+
+    .aroma-card:hover {
+      background: rgba(255,255,255,0.55);
+      transform: translateY(-5px);
+    }
+
+    .aroma-card h3 {
+      margin-bottom: 14px;
+    }
+
+    .aroma-card p {
+      margin: 0 0 16px;
+      font-size: 14px;
+    }
+
+    .aroma-card span {
+      font-size: 12px;
+      color: #7b6c60;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+    }
+
+    /* FEATURE */
+    .feature {
+      padding: 65px 0 100px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .feature-img-wrap {
+      position: relative;
+    }
+
+    .feature-img-bg {
+      position: absolute;
+      inset: 0;
+      border-radius: 48px;
+      transform: rotate(-2deg);
+    }
+
+    .feature-img {
+      position: relative;
+      height: 620px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 48px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-copy p {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 24px 0 28px;
+    }
+
+    .benefits {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .benefit {
+      border-radius: 22px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.65);
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      flex: 0 0 auto;
+    }
+
+    /* SET */
+    .gift {
+      padding: 10px 0 100px;
+    }
+
+    .gift-card {
+      border-radius: 50px;
+      overflow: hidden;
+      background: var(--dark);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0 35px 130px rgba(30, 22, 16, 0.34);
+    }
+
+    .gift-copy {
+      padding: 54px;
+    }
+
+    .gift-copy h2 {
+      color: #fff;
+    }
+
+    .gift-copy p {
+      color: #d8cdc3;
+      margin: 24px 0 30px;
+      font-size: 17px;
+    }
+
+    .gift-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .gift-item {
+      border-radius: 26px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 24px 12px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+    }
+
+    .gift-img {
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+      opacity: 0.82;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+      transition: 0.25s ease;
+      font-size: 30px;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(18px);
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+      color: var(--muted);
+    }
+
+    .footer-grid h3 {
+      margin-bottom: 8px;
+    }
+
+    .footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(34px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      animation: fadeUp 0.95s ease both;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .feature-grid,
+      .aromas-panel,
+      .gift-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 560px;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-actions .btn-glass {
+        display: none;
+      }
+
+      .brand span {
+        font-size: 15px;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-buttons,
+      .feature-copy .hero-buttons,
+      .gift-copy .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .stats,
+      .quick-grid,
+      .product-grid,
+      .aroma-grid,
+      .gift-items {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-card {
+        left: 28px;
+        right: 28px;
+        bottom: 32px;
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .product-image {
+        height: 360px;
+      }
+
+      .aromas-panel,
+      .gift-copy {
+        padding: 28px;
+      }
+
+      .feature-img,
+      .gift-img {
+        height: 460px;
+        min-height: 460px;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cambia este número si algún día usas otro WhatsApp. Formato: 1 + código de área + número -->
+  <!-- WhatsApp usado: +1 786 479 7037 -->
+
+  <div class="nav-wrap">
+    <nav class="glass">
+      <a class="brand" href="#inicio">
+        <div class="brand-mark">VE</div>
+        <span>Velaire</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#aromas">Aromas</a>
+        <a href="#difusores">Difusores</a>
+        <a href="#regalos">Sets</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-glass" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20ver%20el%20cat%C3%A1logo%20de%20productos." target="_blank">Catálogo</a>
+        <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20hacer%20un%20pedido." target="_blank">Comprar</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <div class="pill glass"><span class="dot"></span> Velas · Difusores · Aromas para el hogar</div>
+
+          <h1>Scents for modern spaces.</h1>
+
+          <p>
+            Velaire crea velas aromáticas, difusores, sprays ambientales y aceites esenciales para transformar cualquier espacio en una experiencia limpia, cálida y elegante.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20productos%20arom%C3%A1ticos." target="_blank">Comprar por WhatsApp</a>
+            <a class="btn btn-glass" href="#catalogo">Ver catálogo</a>
+            <a class="btn btn-glass" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20ayuda%20para%20elegir%20un%20aroma." target="_blank">Elegir aroma</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat glass">
+              <strong>12+</strong>
+              <span>Productos premium</span>
+            </div>
+            <div class="stat glass">
+              <strong>4</strong>
+              <span>Familias aromáticas</span>
+            </div>
+            <div class="stat glass">
+              <strong>100%</strong>
+              <span>Ambiente y estilo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-frame glass"></div>
+          <img class="hero-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=1400&auto=format&fit=crop" alt="Vela aromática Velaire" />
+
+          <div class="floating-card glass">
+            <div>
+              <small>Producto destacado</small>
+              <h3>Linen Glow</h3>
+              <p>Algodón blanco · Vainilla clara · Almizcle suave</p>
+            </div>
+            <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20me%20interesa%20la%20vela%20Linen%20Glow." target="_blank">Pedir</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-access">
+      <div class="container quick-grid">
+        <a class="quick-card glass" href="#catalogo"><small>01</small><strong>Velas aromáticas</strong></a>
+        <a class="quick-card glass" href="#difusores"><small>02</small><strong>Difusores</strong></a>
+        <a class="quick-card glass" href="#catalogo"><small>03</small><strong>Sprays ambientales</strong></a>
+        <a class="quick-card glass" href="#aromas"><small>04</small><strong>Guía de aromas</strong></a>
+        <a class="quick-card glass" href="#regalos"><small>05</small><strong>Sets de regalo</strong></a>
+      </div>
+    </section>
+
+    <section id="catalogo" class="catalog">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Catálogo Velaire</div>
+            <h2>Productos para crear ambiente.</h2>
+          </div>
+          <div>
+            <p>El catálogo está pensado para vender por sensación: limpio, cálido, relajante, elegante o premium.</p>
+            <div class="filters" style="margin-top: 16px;">
+              <span class="filter active">Todos</span>
+              <span class="filter">Velas</span>
+              <span class="filter">Difusores</span>
+              <span class="filter">Sprays</span>
+              <span class="filter">Sets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=1200&auto=format&fit=crop" alt="Vela Linen Glow">
+              <span class="tag">Vela aromática</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Limpio · Suave · Elegante</div>
+              <h3>Linen Glow</h3>
+              <p class="notes">Algodón blanco, almizcle suave y vainilla clara. Ideal para habitaciones y baños.</p>
+              <div class="product-bottom">
+                <span class="price">$28</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Linen%20Glow." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Linen%20Glow." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=1200&auto=format&fit=crop" alt="Difusor Calm Woods">
+              <span class="tag">Difusor</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Cálido · Amaderado · Premium</div>
+              <h3>Calm Woods</h3>
+              <p class="notes">Sándalo, cedro, ámbar y bergamota. Perfecto para salas, oficinas y entradas.</p>
+              <div class="product-bottom">
+                <span class="price">$42</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Calm%20Woods." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20el%20difusor%20Calm%20Woods." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1200&auto=format&fit=crop" alt="Spray Velvet Room">
+              <span class="tag">Spray ambiental</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Rápido · Sofisticado · Intenso</div>
+              <h3>Velvet Room</h3>
+              <p class="notes">Vainilla ahumada, cashmere y flor blanca. Para refrescar espacios al instante.</p>
+              <div class="product-bottom">
+                <span class="price">$24</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Velvet%20Room." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Velvet%20Room." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1602872029708-84d970d3382b?q=80&w=1200&auto=format&fit=crop" alt="Vela Moon Sand">
+              <span class="tag">Vela premium</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Relajante · Cremoso · Nocturno</div>
+              <h3>Moon Sand</h3>
+              <p class="notes">Coco suave, sal marina y madera clara. Una fragancia limpia con carácter.</p>
+              <div class="product-bottom">
+                <span class="price">$31</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Moon%20Sand." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Moon%20Sand." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1200&auto=format&fit=crop" alt="Aceite Pure Lavender">
+              <span class="tag">Aceite esencial</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Calma · Descanso · Spa</div>
+              <h3>Pure Lavender</h3>
+              <p class="notes">Lavanda, eucalipto y hierbas frescas. Para rutinas de descanso y relajación.</p>
+              <div class="product-bottom">
+                <span class="price">$19</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Pure%20Lavender." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Pure%20Lavender." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1602524813519-572fd7eaa8a2?q=80&w=1200&auto=format&fit=crop" alt="Set Calm Scene">
+              <span class="tag">Set de regalo</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Completo · Regalo · Boutique</div>
+              <h3>Calm Scene Set</h3>
+              <p class="notes">Vela, difusor y spray en una misma familia aromática. Ideal para regalar.</p>
+              <div class="product-bottom">
+                <span class="price">$78</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Calm%20Scene%20Set." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Calm%20Scene%20Set." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?q=80&w=1200&auto=format&fit=crop" alt="Vela Amber Ritual">
+              <span class="tag">Vela intensa</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Sensual · Cálido · Envolvente</div>
+              <h3>Amber Ritual</h3>
+              <p class="notes">Ámbar, vainilla negra y madera tostada. Aroma elegante para noches especiales.</p>
+              <div class="product-bottom">
+                <span class="price">$33</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Amber%20Ritual." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20Amber%20Ritual." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card glass">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" alt="White Hotel Diffuser">
+              <span class="tag">Difusor premium</span>
+            </div>
+            <div class="product-info">
+              <div class="mood">Hotel · Limpio · Lujoso</div>
+              <h3>White Hotel</h3>
+              <p class="notes">Té blanco, limón suave y almizcle. Fragancia tipo hotel boutique.</p>
+              <div class="product-bottom">
+                <span class="price">$46</span>
+                <div class="mini-actions">
+                  <a class="mini-btn" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20White%20Hotel." target="_blank">Ver</a>
+                  <a class="mini-btn dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20White%20Hotel." target="_blank">Pedir</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="aromas" class="aromas">
+      <div class="container aromas-panel glass">
+        <div>
+          <div class="eyebrow">Guía de aromas</div>
+          <h2>Elige por sensación, no por impulso.</h2>
+          <p>Una marca de aromas vende mejor cuando el cliente entiende qué ambiente quiere crear: limpio, cálido, relajante o sofisticado.</p>
+          <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20ayuda%20para%20elegir%20el%20aroma%20ideal%20para%20mi%20espacio." target="_blank">Ayúdame a elegir</a>
+        </div>
+
+        <div class="aroma-grid">
+          <div class="aroma-card">
+            <h3>Limpios</h3>
+            <p>Aromas frescos y suaves para baños, habitaciones y oficinas.</p>
+            <span>Algodón · Té blanco · Almizcle</span>
+          </div>
+          <div class="aroma-card">
+            <h3>Amaderados</h3>
+            <p>Fragancias cálidas para salas, estudios y espacios elegantes.</p>
+            <span>Sándalo · Cedro · Ámbar</span>
+          </div>
+          <div class="aroma-card">
+            <h3>Dulces suaves</h3>
+            <p>Notas cremosas sin ser empalagosas. Ideales para crear cercanía.</p>
+            <span>Vainilla · Coco · Cashmere</span>
+          </div>
+          <div class="aroma-card">
+            <h3>Spa & Relax</h3>
+            <p>Sensación de descanso, limpieza y calma desde que entras.</p>
+            <span>Lavanda · Eucalipto · Salvia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="difusores" class="feature">
+      <div class="container feature-grid">
+        <div class="feature-img-wrap">
+          <div class="feature-img-bg glass"></div>
+          <img class="feature-img" src="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=1400&auto=format&fit=crop" alt="Difusor Velaire">
+        </div>
+
+        <div class="feature-copy">
+          <div class="eyebrow">Difusores Velaire</div>
+          <h2>Aroma constante sin encender nada.</h2>
+          <p>Los difusores son perfectos para mantener un espacio oliendo bien todo el día. Además decoran y elevan la percepción del ambiente.</p>
+
+          <div class="benefits">
+            <div class="benefit"><span class="check">✓</span> Ideal para salas, baños, oficinas y recepciones.</div>
+            <div class="benefit"><span class="check">✓</span> Diseño limpio tipo decoración premium.</div>
+            <div class="benefit"><span class="check">✓</span> Fragancias continuas y elegantes.</div>
+            <div class="benefit"><span class="check">✓</span> Perfectos para combinar con velas.</div>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20un%20difusor." target="_blank">Comprar difusores</a>
+            <a class="btn btn-glass" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20saber%20cu%C3%A1nto%20duran%20los%20difusores." target="_blank">Preguntar duración</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regalos" class="gift">
+      <div class="container gift-card">
+        <div class="gift-copy">
+          <div class="eyebrow">Sets de regalo</div>
+          <h2>Regala una escena completa.</h2>
+          <p>Combina vela, difusor y spray ambiental en una misma familia aromática. Es más fácil de regalar, se ve más premium y crea una experiencia completa.</p>
+
+          <div class="gift-items">
+            <div class="gift-item">Vela</div>
+            <div class="gift-item">Difusor</div>
+            <div class="gift-item">Spray</div>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn" style="background:#fff;color:#111;" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20comprar%20un%20set%20de%20regalo." target="_blank">Comprar set</a>
+            <a class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.2);" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20personalizar%20un%20set%20de%20aromas." target="_blank">Personalizar aroma</a>
+          </div>
+        </div>
+
+        <img class="gift-img" src="https://images.unsplash.com/photo-1602524813519-572fd7eaa8a2?q=80&w=1400&auto=format&fit=crop" alt="Set de regalo Velaire">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Velaire</h3>
+        <p>Aromas, velas y difusores para espacios modernos.</p>
+      </div>
+
+      <div class="footer-actions">
+        <a class="btn btn-glass" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20ver%20el%20cat%C3%A1logo." target="_blank">WhatsApp</a>
+        <a class="btn btn-glass" href="#catalogo">Catálogo</a>
+        <a class="btn btn-dark" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20hacer%20un%20pedido." target="_blank">Comprar ahora</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/17864797037?text=Hola%20Velaire%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20velas%2C%20difusores%20y%20aromas." target="_blank" aria-label="Contactar por WhatsApp">✆</a>
+</body>
+</html>
